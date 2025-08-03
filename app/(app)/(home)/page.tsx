@@ -1,18 +1,7 @@
-import configPromise from "@payload-config"
-import { getPayload } from "payload"
-
-async function page() {
-	const payload = await getPayload({
-		config: configPromise
-	})
-
-	const data = await payload.find({
-		collection: "categories"
-	})
-
+function page() {
 	return (
-		<div>
-			{JSON.stringify(data, null, 2)}
+		<div className="flex justify-center items-center">
+			This is the Home page
 		</div>
 	)
 }
